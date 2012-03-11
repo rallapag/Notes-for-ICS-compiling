@@ -1,11 +1,11 @@
-
 get ti stack 
-create directory wlan under system
+create directory wlan under system 
+change to /system/wlan folder and
 git clone git://github.com/CyanogenMod/android_system_wlan_ti.git -b gingerbread
 rename android_system_wlan_ti to ti
 
 get prebuilts
-under vendor/cm
+change to vendor/cm
 execute get-prebuilts script
 
 You need to place copybit.h to hardware/libhardware/include/hardware/ . 
@@ -18,4 +18,5 @@ get webrtc patch for ICS compiling for armv6 and armv5 from following git
 https://github.com/unforgiven512/android_external_webrtc
 or
 https://github.com/mikegapinski/platform_external_webrtc
+replace the /external/webrtc with downloaded one
 
