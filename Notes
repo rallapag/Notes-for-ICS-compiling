@@ -1,3 +1,4 @@
+
 get ti stack 
 create directory wlan under system
 git clone git://github.com/CyanogenMod/android_system_wlan_ti.git -b gingerbread
@@ -17,3 +18,4 @@ get webrtc patch for ICS compiling for armv6 and armv5 from following git
 https://github.com/unforgiven512/android_external_webrtc
 or
 https://github.com/mikegapinski/platform_external_webrtc
+
