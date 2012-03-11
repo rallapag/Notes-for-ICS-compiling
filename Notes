@@ -7,18 +7,13 @@ get prebuilts
 under vendor/cm
 execute get-prebuilts script
 
-You need to copy copybit.h to hardware/libhardware/include/hardware/ . 
+You need to place copybit.h to hardware/libhardware/include/hardware/ . 
 get it from copybit.h from the cm7 repos. 
+https://github.com/CyanogenMod/android_hardware_libhardware/blob/gingerbread/include/hardware/copybit.h
 or from following github
 https://github.com/TeamICS/ICS_Fixes
 
-delete libgralloc and libcopybit folders in device/htc/click 
-and edit Android.mk to comment out libgralloc and libcopybit
-
-get webrtc patch for armv6 and armv5 ICS compiling from following git
-armv6 and armv5
+get webrtc patch for ICS compiling for armv6 and armv5 from following git
 https://github.com/unforgiven512/android_external_webrtc
-armv5
+or
 https://github.com/mikegapinski/platform_external_webrtc
-
-removed overlay files of click and replaced with buzz
