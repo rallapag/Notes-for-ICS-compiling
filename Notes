@@ -1,22 +1,81 @@
 get ti stack 
+<<<<<<< HEAD
 create directory wlan under system 
 change to /system/wlan folder and
 git clone git://github.com/CyanogenMod/android_system_wlan_ti.git -b gingerbread
+=======
+create directory wlan under system
+	git clone git://github.com/CyanogenMod/android_system_wlan_ti.git -b gingerbread
+>>>>>>> Added more info
 rename android_system_wlan_ti to ti
+
+open system/wlan/ti/sta_dk_4_0_4_32/config/Android.mk file
+under
+	LOCAL_MODULE := wpa_supplicant.conf
+change
+	LOCAL_MODULE_TAGS := user
+to 
+	LOCAL_MODULE_TAGS := optional
+#########################################################################
 
 get prebuilts
 change to vendor/cm
 execute get-prebuilts script
+#########################################################################
 
 You need to place copybit.h to hardware/libhardware/include/hardware/ . 
 get it from copybit.h from the cm7 repos. 
 https://github.com/CyanogenMod/android_hardware_libhardware/blob/gingerbread/include/hardware/copybit.h
 or from following github
 https://github.com/TeamICS/ICS_Fixes
+<<<<<<< HEAD
 
 get webrtc patch for ICS compiling for armv6 and armv5 from following git
+=======
+#########################################################################
+
+get webrtc patch for armv6 and armv5 ICS compiling from following git
+armv6 and armv5
+>>>>>>> Added more info
 https://github.com/unforgiven512/android_external_webrtc
 or
 https://github.com/mikegapinski/platform_external_webrtc
+<<<<<<< HEAD
 replace the /external/webrtc with downloaded one
 
+=======
+#########################################################################
+
+once compiling ended up with following error
+
+Install: out/target/product/click/system/framework/framework.jar
+Checking API: checkapi-last
+Checking API: checkapi-current
+out/target/common/obj/PACKAGING/public_api.txt:3705: error 3: Added class Profile to package android.app
+out/target/common/obj/PACKAGING/public_api.txt:3720: error 3: Added class ProfileGroup to package android.app
+out/target/common/obj/PACKAGING/public_api.txt:3733: error 3: Added class ProfileGroup.Mode to package android.app
+out/target/common/obj/PACKAGING/public_api.txt:3741: error 3: Added class ProfileManager to package android.app
+out/target/common/obj/PACKAGING/public_api.txt:5172: error 5: Added public field android.content.Context.PROFILE_SERVICE
+
+******************************
+You have tried to change the API from what has been previously approved.
+
+To make these errors go away, you have two choices:
+   1) You can add "@hide" javadoc comments to the methods, etc. listed in the
+      errors above.
+
+   2) You can update current.txt by executing the following command:
+         make update-api
+      ^^^^^^^^^^^^^^^^^^
+
+excuted make update-api
+then continued with make
+#########################################################################
+
+Finally ended with error about system size:
+Install system fs image: out/target/product/click/system.img
+out/target/product/click/system.img+out/target/product/click/obj/PACKAGING/recovery_patch_intermediates/recovery_from_boot.p total size is 176547247
+error: out/target/product/click/system.img+out/target/product/click/obj/PACKAGING/recovery_patch_intermediates/recovery_from_boot.p too large (176547247 > [162201600 - 1622016])
+
+used files from system folder to test the build and it is booting
+>>>>>>> Added more info
