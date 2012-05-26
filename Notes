@@ -25,45 +25,12 @@ or from following github
 https://github.com/TeamICS/ICS_Fixes
 #########################################################################
 
+Note added on 26th May 2012 - following note is no longer needed as the patch is merged in to CM9
+
 ->	get webrtc patch for ICS compiling for armv6 and armv5 from following git
 https://github.com/unforgiven512/android_external_webrtc
 or
 https://github.com/mikegapinski/platform_external_webrtc
 
 ->	replace the /external/webrtc with downloaded one
-
-#########################################################################
-
-->	compiling ended up with following error
-
-Install: out/target/product/click/system/framework/framework.jar
-Checking API: checkapi-last
-Checking API: checkapi-current
-out/target/common/obj/PACKAGING/public_api.txt:3705: error 3: Added class Profile to package android.app
-out/target/common/obj/PACKAGING/public_api.txt:3720: error 3: Added class ProfileGroup to package android.app
-out/target/common/obj/PACKAGING/public_api.txt:3733: error 3: Added class ProfileGroup.Mode to package android.app
-out/target/common/obj/PACKAGING/public_api.txt:3741: error 3: Added class ProfileManager to package android.app
-out/target/common/obj/PACKAGING/public_api.txt:5172: error 5: Added public field android.content.Context.PROFILE_SERVICE
-
-******************************
-You have tried to change the API from what has been previously approved.
-
-To make these errors go away, you have two choices:
-   1) You can add "@hide" javadoc comments to the methods, etc. listed in the
-      errors above.
-
-   2) You can update current.txt by executing the following command:
-         make update-api
-      ^^^^^^^^^^^^^^^^^^
-
-->	excuted make update-api
-->	then continued with make
-#########################################################################
-
-Finally ended with error about system size:
-Install system fs image: out/target/product/click/system.img
-out/target/product/click/system.img+out/target/product/click/obj/PACKAGING/recovery_patch_intermediates/recovery_from_boot.p total size is 176547247
-error: out/target/product/click/system.img+out/target/product/click/obj/PACKAGING/recovery_patch_intermediates/recovery_from_boot.p too large (176547247 > [162201600 - 1622016])
-
-->	used files from system folder to test the build and it is booting
 
